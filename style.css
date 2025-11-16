@@ -8,7 +8,7 @@ body {
   background-color: #f3fbfe;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 svg {
@@ -661,6 +661,12 @@ td i {
   html,
   body {
     overflow-x: hidden !important;
+    width: 100vw !important;
+  }
+  body>div{
+    width: 100vw !important;
+        overflow-x: hidden !important;
+
   }
 }
 
@@ -686,9 +692,7 @@ td i {
   }
 
   .main-content {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-top: 1rem !important;
+     margin-top: 1rem !important;
   }
 
   .main-user {
@@ -788,10 +792,6 @@ td i {
   .filter-row {
     flex-wrap: nowrap !important;
   }
-  .container {
-    width: 100vw !important;
-  }
-
   .edit-container div {
     width: 100% !important;
     display: flex !important;
@@ -815,6 +815,9 @@ color: #086cac !important;
 ================================ */
 @media (min-width: 768px) and (max-width: 991px) {
 
+  header{
+    width: 100vw !important;
+  }
   /* ===== Sidebar ===== */
   .sidebar {
     width: 220px !important;   /* بدل 280 أو 300 */
@@ -837,8 +840,8 @@ color: #086cac !important;
 
   /* ===== Main Content ===== */
   .main-content {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+ 
+    width: 100vw !important;
   }
 
   /* الهيدر الثابت */
@@ -860,4 +863,7 @@ color: #086cac !important;
   body, html {
     overflow-x: hidden !important;
   }
+}
+#dataBody tr:hover {
+   cursor: pointer;
 }
