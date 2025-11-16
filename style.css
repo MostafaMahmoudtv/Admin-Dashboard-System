@@ -794,8 +794,8 @@ td i {
     flex-wrap: nowrap !important;
   }
   .container {
-    width: 92vw !important;
-  }
+    width: 100% !important;
+   }
 
   .edit-container div {
     width: 100% !important;
@@ -809,6 +809,7 @@ td i {
   }
   .card {
      width: 100vw !important;
+     background-color: transparent !important;
   }
 }
 .fa-edit {
@@ -846,6 +847,7 @@ color: #086cac !important;
   /* ===== Main Content ===== */
   .main-content {
     width: 100vw !important;
+
   }
 
   /* الهيدر الثابت */
@@ -872,7 +874,27 @@ color: #086cac !important;
    cursor: pointer;
 }
 @media (max-width: 768px) {
+ .main-user, .card{
+      border: none !important;
+padding: 0 !important;
+background-color: transparent ;
+;
 
+  }
+  .main-content{
+    padding: 0 !important;
+            background-color: transparent !important;
+
+  }
+.card-custom,.card-body{
+  border: none !important;
+  border: 1px solid rgb(210, 210, 210) !important; 
+  background-color: white;
+  border-radius: 10px;
+  width: 95vw !important;
+  margin: auto !important;
+  padding: 0.6rem !important;
+}
   /* المودال نفسه */
   .location-modal .modal-dialog {
     max-width: 95% !important;
