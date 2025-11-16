@@ -792,6 +792,10 @@ td i {
   .filter-row {
     flex-wrap: nowrap !important;
   }
+  .container {
+    width: 90vw !important;
+  }
+
   .edit-container div {
     width: 100% !important;
     display: flex !important;
