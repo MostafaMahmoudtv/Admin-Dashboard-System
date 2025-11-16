@@ -646,6 +646,7 @@ td i {
     flex-direction: column !important;
     gap: 10px !important;
     text-align: center;
+    width: 90vw !important;
   }
 
   #itemsPerPage {
@@ -870,4 +871,50 @@ color: #086cac !important;
 }
 #dataBody tr:hover {
    cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  /* المودال نفسه */
+  .location-modal .modal-dialog {
+    max-width: 95% !important;
+    margin: auto;
+  }
+
+  .location-modal .modal-content {
+    border-radius: 18px !important;
+  }
+
+  .location-modal .modal-body {
+    padding: 20px !important;
+  }
+
+  /* خليهم 2 كولوم زي الصورة */
+  .location-modal .modal-body .row > div {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* ضبط الحقول */
+  .location-modal label {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .location-modal input,
+  .location-modal select {
+    font-size: 13px;
+    padding: 8px 10px !important;
+    border-radius: 10px !important;
+  }
+
+  /* الفوتر */
+  .location-modal .modal-footer {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 18px !important;
+  }
+
+  .location-modal .modal-footer .btn {
+    width: 100% !important;
+  }
 }
