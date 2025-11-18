@@ -30,7 +30,7 @@
     <header
       class="d-md-none bg-white shadow-sm p-3 d-flex justify-content-between align-items-center"
     >
-   <a href="index.html" class="text-decoration-none">
+      <a href="index.html" class="text-decoration-none">
         <h2 class="logo h3 mb-0">Sign<span>Me</span></h2>
       </a>
       <button id="menuToggle" class="btn p-2 rounded">
@@ -387,147 +387,213 @@
                 </button>
 
                 <!-- Modal (Form) -->
-                <div class="modal fade" id="roleModal" tabindex="-1">
-                  <div class="modal-dialog modal-xl">
-                    <div class="modal-content rounded-4 border-0">
-                      <!-- Header -->
-                      <div class="modal-header bg-light rounded-top-4">
-                        <h5
-                          class="modal-title d-flex align-items-center fw-semibold text-primary"
-                        >
-                          <i class="bi bi-plus-circle-fill me-2"></i> Add a new
-                          role
-                        </h5>
-                        <button
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                        ></button>
-                      </div>
+             <div class="modal fade" id="roleModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content rounded-4 border-0">
+      <!-- Header -->
+      <div class="modal-header bg-light rounded-top-4">
+        <h5 class="modal-title d-flex align-items-center fw-semibold text-primary">
+          <i class="bi bi-plus-circle-fill me-2"></i> Add a new role
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-                      <!-- Body -->
-                      <div class="modal-body">
-                        <!-- Role Name Input -->
-                        <label class="fw-semibold mb-2">Role name</label>
-                        <input
-                          type="text"
-                          class="form-control mb-4 rounded-3"
-                        />
+      <!-- Body -->
+      <div class="modal-body">
+        <!-- Role Name -->
+        <label class="fw-semibold mb-2">Role name</label>
+        <input type="text" class="form-control mb-4 rounded-3" />
 
-                        <!-- Permissions list Title -->
-                        <div
-                          class="fw-semibold p-2 rounded-3 mb-3"
-                          style="background: #eaf7fd; color: #086cac"
-                        >
-                          Permissions list
-                        </div>
+        <!-- Title -->
+        <div class="fw-semibold p-2 rounded-3 mb-3" style="background: #eaf7fd; color: #086cac">
+          Permissions list
+        </div>
 
-                        <!-- Permissions Table -->
-                        <div class="table-responsive">
-                          <table class="table table-borderless align-middle">
-                            <thead>
-                              <tr
-                                class="text-secondary fw-semibold text-center"
-                              >
-                                <th></th>
-                                <th>Lists</th>
-                                <th>Time</th>
-                                <th>Visit</th>
-                              </tr>
-                            </thead>
+        <!-- Grid -->
+        <div class="container-fluid">
+          <!-- Headers -->
+          <div class="row text-center mb-3">
+            <div class="col-3"></div>
+            <div class="col-3 text-secondary fw-semibold">Lists</div>
+            <div class="col-3 text-secondary fw-semibold">Time</div>
+            <div class="col-3 text-secondary fw-semibold">Visit</div>
+          </div>
 
-                            <tbody>
-                              <!-- Row 1 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /> Allow list</td>
-                                <td>
-                                  <input type="checkbox" /> Edit entry time
-                                </td>
-                                <td>
-                                  <input type="checkbox" /> Visit permissions
-                                </td>
-                              </tr>
+          <!-- Row 1 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" class="form-check-input" style="width:16px;height:16px;" />
+            </div>
 
-                              <!-- Row 2 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /> Block list</td>
-                                <td>
-                                  <input type="checkbox" /> Edit exit time
-                                </td>
-                                <td><input type="checkbox" /> Visit entry</td>
-                              </tr>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Allow list</label>
+              </div>
+            </div>
 
-                              <!-- Row 3 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td>
-                                  <input type="checkbox" /> General settings
-                                </td>
-                                <td><input type="checkbox" /> Delete record</td>
-                                <td><input type="checkbox" /> Visit exit</td>
-                              </tr>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Edit entry time</label>
+              </div>
+            </div>
 
-                              <!-- Row 4 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /> Reports</td>
-                                <td></td>
-                                <td>
-                                  <input type="checkbox" /> Permanent visitor
-                                </td>
-                              </tr>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Visit permissions</label>
+              </div>
+            </div>
+          </div>
 
-                              <!-- Row 5 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td>
-                                  <input type="checkbox" /> Visit permissions
-                                </td>
-                                <td></td>
-                                <td></td>
-                              </tr>
+          <!-- Row 2 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
 
-                              <!-- Row 6 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /> Places guide</td>
-                                <td></td>
-                                <td></td>
-                              </tr>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Block list</label>
+              </div>
+            </div>
 
-                              <!-- Row 7 -->
-                              <tr>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /> Users</td>
-                                <td></td>
-                                <td></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Edit exit time</label>
+              </div>
+            </div>
 
-                      <!-- Footer -->
-                      <div
-                        class="modal-footer d-flex justify-content-center gap-3"
-                      >
-                        <button
-                          class="btn px-5 text-white"
-                          style="background: #094c7e"
-                        >
-                          Add
-                        </button>
-                        <button
-                          class="btn btn-light px-5 border"
-                          data-bs-dismiss="modal"
-                        >
-                          Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Visit entry</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>General settings</label>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Delete record</label>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Visit exit</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Reports</label>
+              </div>
+            </div>
+
+            <div class="col-3"></div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Permanent visitor</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Visit permissions</label>
+              </div>
+            </div>
+
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+          </div>
+
+          <!-- Row 6 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Places guide</label>
+              </div>
+            </div>
+
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+          </div>
+
+          <!-- Row 7 -->
+          <div class="row align-items-center mb-2">
+            <div class="col-3 text-center">
+              <input type="checkbox" style="width:16px;height:16px;" />
+            </div>
+
+            <div class="col-3">
+              <div class="d-flex align-items-center gap-2">
+                <input type="checkbox" style="width:16px;height:16px;" />
+                <label>Users</label>
+              </div>
+            </div>
+
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+          </div>
+
+        </div>
+        <!-- End container -->
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer d-flex justify-content-center gap-3">
+        <button class="btn px-5 text-white" style="background: #094c7e">
+          Add
+        </button>
+        <button class="btn btn-light px-5 border" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
                 <button
                   class="btn border border-info-subtle rounded-3 px-3 btn-filter-mobile"
@@ -557,9 +623,8 @@
                       <button class="btn btn-sm btn-outline-danger me-1">
                         <i class="bi bi-trash"></i>
                       </button>
-                      <button class="btn btn-sm  fa-lg">
-                        <i class="fas fa-edit"></i
-                    >
+                      <button class="btn btn-sm fa-lg">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>
@@ -572,8 +637,7 @@
                         <i class="bi bi-trash"></i>
                       </button>
                       <button class="btn btn-sm fa-lg">
-                        <i class="fas fa-edit"></i
-                    >
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>
@@ -586,8 +650,7 @@
                         <i class="bi bi-trash"></i>
                       </button>
                       <button class="btn btn-sm fa-lg">
-                        <i class="fas fa-edit"></i
-                    >
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>
