@@ -423,7 +423,8 @@ header svg {
 }
 
 td i {
-  cursor: pointer;
+  cursor: pointer !important;
+  color: #025c8c !important;
 }
 
 .custom-border {
@@ -664,10 +665,9 @@ td i {
     overflow-x: hidden !important;
     width: 100vw !important;
   }
-  body>div{
+  body > div {
     width: 100vw !important;
-        overflow-x: hidden !important;
-
+    overflow-x: hidden !important;
   }
 }
 
@@ -693,7 +693,7 @@ td i {
   }
 
   .main-content {
-     margin-top: 1rem !important;
+    margin-top: 1rem !important;
   }
 
   .main-user {
@@ -752,11 +752,20 @@ td i {
   }
 
   .modal-body {
-    padding: 15px !important;
+    font-size: 0.6rem !important;
   }
 
   .modal-footer button {
-    width: 45% !important;
+    width: 40% !important;
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+  .modal.show .modal-dialog {
+    display: flex !important;
+    align-items: center; /* توسيط رأسي */
+    justify-content: center; /* توسيط أفقي */
+    min-height: 100vh; /* خلي ارتفاعها قد الشاشة */
+    margin: 0 auto; /* منع المسافات */
   }
 
   table thead {
@@ -795,7 +804,7 @@ td i {
   }
   .container {
     width: 100% !important;
-   }
+  }
 
   .edit-container div {
     width: 100% !important;
@@ -808,25 +817,24 @@ td i {
     flex-direction: column !important;
   }
   .card {
-     width: 100vw !important;
-     background-color: transparent !important;
+    width: 100vw !important;
+    background-color: transparent !important;
   }
 }
 .fa-edit {
   font-size: 1rem !important; /* أو أكبر */
-color: #086cac !important;
+  color: #086cac !important;
 }
 /* ================================
    RESPONSIVE – TABLET (768px–991px)
 ================================ */
 @media (min-width: 768px) and (max-width: 991px) {
-
-  header{
+  header {
     width: 100vw !important;
   }
   /* ===== Sidebar ===== */
   .sidebar {
-    width: 220px !important;   /* بدل 280 أو 300 */
+    width: 220px !important; /* بدل 280 أو 300 */
     padding: 20px 15px !important;
   }
 
@@ -847,7 +855,6 @@ color: #086cac !important;
   /* ===== Main Content ===== */
   .main-content {
     width: 100vw !important;
-
   }
 
   /* الهيدر الثابت */
@@ -857,7 +864,7 @@ color: #086cac !important;
 
   /* ===== Layout Width ===== */
   .d-flex.gap-4 {
-    gap: 1rem !important;  /* علشان المسافات متبقاش كبيرة */
+    gap: 1rem !important; /* علشان المسافات متبقاش كبيرة */
   }
 
   /* ======"Content Cards" إن وُجدت ===== */
@@ -866,35 +873,35 @@ color: #086cac !important;
   }
 
   /* ===== Fix Overflow ===== */
-  body, html {
+  body,
+  html {
     overflow-x: hidden !important;
   }
 }
 #dataBody tr:hover {
-   cursor: pointer;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
- .main-user, .card{
-      border: none !important;
-padding: 0 !important;
-background-color: transparent ;
-;
-
-  }
-  .main-content{
+  .main-user,
+  .card {
+    border: none !important;
     padding: 0 !important;
-            background-color: transparent !important;
-
+    background-color: transparent;
   }
-.card-custom,.card-body{
-  border: none !important;
-  border: 1px solid rgb(210, 210, 210) !important; 
-  background-color: white;
-  border-radius: 10px;
-  width: 95vw !important;
-  margin: auto !important;
-  padding: 0.6rem !important;
-}
+  .main-content {
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+  .card-custom,
+  .card-body {
+    border: none !important;
+    border: 1px solid rgb(210, 210, 210) !important;
+    background-color: white;
+    border-radius: 10px;
+    width: 95vw !important;
+    margin: auto !important;
+    padding: 0.6rem !important;
+  }
   /* المودال نفسه */
   .location-modal .modal-dialog {
     max-width: 95% !important;
@@ -903,6 +910,21 @@ background-color: transparent ;
 
   .location-modal .modal-content {
     border-radius: 18px !important;
+  }
+  .modal-content {
+    width: 100vw !important;
+  }
+  .modal-content #uploadBox {
+    height: auto !important;
+    text-align: center;
+    overflow: hidden !important;
+  }
+
+  .modal-content #uploadBox p {
+    width: 100%;
+  }
+  .modal-content #uploadBox i {
+    margin: auto !important;
   }
 
   .location-modal .modal-body {
@@ -930,12 +952,35 @@ background-color: transparent ;
 
   /* الفوتر */
   .location-modal .modal-footer {
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 12px !important;
     padding: 18px !important;
   }
 
   .location-modal .modal-footer .btn {
+    width: 40% !important;
+  }
+  .location-modal .modal-footer {
+    flex-wrap: nowrap !important;
+  }
+}
+  .modal-narrow {
+    max-width: 40vw !important; /* قلّل أو كبّر زي ما تحب */
+  }
+
+  @media (max-width: 768px) {
+    .modal-narrow {
+      max-width: 95vw !important; /* في الموبايل يرجع طبيعي */
+    }
+  }
+  @media (max-width: 768px) {
+  #viewModal .row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  #viewModal .row > div {
     width: 100% !important;
   }
 }

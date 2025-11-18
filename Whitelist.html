@@ -30,7 +30,7 @@
     <header
       class="d-md-none bg-white shadow-sm p-3 d-flex justify-content-between align-items-center"
     >
-   <a href="index.html" class="text-decoration-none">
+      <a href="index.html" class="text-decoration-none">
         <h2 class="logo h3 mb-0">Sign<span>Me</span></h2>
       </a>
       <button id="menuToggle" class="btn p-2 rounded">
@@ -390,17 +390,22 @@
                   <i class="fas fa-file-excel"></i>
                 </button>
                 <!-- Modal (Form) -->
-                <div class="modal fade" id="roleModal">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content border-0 custom-modal">
+                <div class="modal fade" id="roleModal" tabindex="-1">
+                  <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div
+                      class="  modal-content border-0"
+                      style="border-radius: 30px ;width: 65%; margin: auto;"
+                    >
                       <!-- Header -->
-                      <div class="modal-header bg-white">
+                      <div
+                        class="modal-header bg-white px-4 py-3 border-bottom"
+                        style="border-radius: 30px 30px 0 0"
+                      >
                         <h5
-                          class="modal-title fw-semibold d-flex align-items-center"
-                          style="color: #086cac"
+                          class="modal-title fw-semibold d-flex align-items-center text-primary"
                         >
-                          <i class="bi bi-person-plus-fill me-2"></i>
-                          Add a new Whitelist User
+                          <i class="bi bi-person-plus-fill me-2"></i> Add a new
+                          Whitelist User
                         </h5>
                         <button
                           class="btn-close"
@@ -409,9 +414,10 @@
                       </div>
 
                       <!-- Body -->
-                      <div class="modal-body">
-                        <div class="form-grid">
-                          <div>
+                      <div class="modal-body px-4 py-4">
+                        <div class="row g-4">
+                          <!-- Row 1 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Name</label>
                             <input
                               type="text"
@@ -419,7 +425,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1"
                               >National ID number</label
                             >
@@ -429,7 +435,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 2 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Description</label>
                             <input
                               type="text"
@@ -437,7 +444,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Work Side</label>
                             <input
                               type="text"
@@ -445,7 +452,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 3 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Birth Date</label>
                             <input
                               type="date"
@@ -453,7 +461,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Email</label>
                             <input
                               type="email"
@@ -461,7 +469,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 4 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Phone number</label>
                             <input
                               type="text"
@@ -469,7 +478,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1"
                               >Activation Date</label
                             >
@@ -479,7 +488,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 5 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Expiry Date</label>
                             <input
                               type="date"
@@ -487,7 +497,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Address</label>
                             <input
                               type="text"
@@ -495,7 +505,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 6 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">City</label>
                             <input
                               type="text"
@@ -503,7 +514,7 @@
                             />
                           </div>
 
-                          <div>
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Code</label>
                             <input
                               type="text"
@@ -511,7 +522,8 @@
                             />
                           </div>
 
-                          <div>
+                          <!-- Row 7 -->
+                          <div class="col-6">
                             <label class="fw-semibold mb-1">Job</label>
                             <input
                               type="text"
@@ -519,19 +531,32 @@
                             />
                           </div>
 
-                          <!-- Upload full width -->
-                          <div class="full">
+                          <!-- Upload -->
+                          <div class="col-12 mt-2">
                             <label class="fw-semibold mb-2">Attachments</label>
 
-                            <div id="uploadBox" class="upload-box">
-                              <i class="fa-solid fa-upload"></i>
-                              <p class="text-muted">
+                            <div
+                              id="uploadBox"
+                              class="border rounded-3 w-100 d-flex flex-column justify-content-center align-items-center"
+                              style="
+                                height: 140px;
+                                border: 2px dashed #cfcfcf;
+                                cursor: pointer;
+                              "
+                            >
+                              <i
+                                class="fa-solid fa-upload mb-2 text-primary"
+                                style="font-size: 25px"
+                              ></i>
+
+                              <p class="text-muted text-center mb-0">
                                 Please upload attachments in PNG, JPG, PDF
                                 format.
                               </p>
+
                               <p
                                 id="fileName"
-                                class="text-primary fw-semibold"
+                                class="mt-2 text-primary fw-semibold text-center"
                               ></p>
                             </div>
 
@@ -539,7 +564,7 @@
                               type="file"
                               id="fileUpload"
                               hidden
-                              accept="image/png, image/jpeg, application/pdf"
+                              accept="image/png,image/jpeg,application/pdf"
                             />
                           </div>
                         </div>
@@ -547,7 +572,8 @@
 
                       <!-- Footer -->
                       <div
-                        class="modal-footer d-flex justify-content-center gap-4"
+                        class="modal-footer justify-content-center gap-3 py-3 border-top"
+                        style="border-radius: 0 0 30px 30px"
                       >
                         <button
                           class="btn text-white px-5 py-2"
@@ -555,6 +581,7 @@
                         >
                           Add
                         </button>
+
                         <button
                           class="btn px-5 py-2"
                           style="background: #e6e6e6; border-radius: 10px"
@@ -641,9 +668,8 @@
                       <button class="btn btn-sm btn-outline-danger me-1">
                         <i class="bi bi-trash"></i>
                       </button>
-                      <button class="btn btn-sm  ">
-                        <i class="fas fa-edit"></i
-                    >
+                      <button class="btn btn-sm">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>
@@ -655,9 +681,8 @@
                       <button class="btn btn-sm btn-outline-danger me-1">
                         <i class="bi bi-trash"></i>
                       </button>
-                      <button class="btn btn-sm  ">
-                        <i class="fas fa-edit"></i
-                    >
+                      <button class="btn btn-sm">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>
@@ -669,9 +694,8 @@
                       <button class="btn btn-sm btn-outline-danger me-1">
                         <i class="bi bi-trash"></i>
                       </button>
-                      <button class="btn btn-sm  ">
-                        <i class="fas fa-edit"></i
-                    >
+                      <button class="btn btn-sm">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
                   </tr>

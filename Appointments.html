@@ -395,177 +395,99 @@
                 <i class="fas fa-file-excel"></i>
               </button>
               <!-- Modal (Form) -->
-              <div class="modal fade" id="roleModal">
-                <div class="modal-dialog modal-lg">
-                  <div
-                    class="modal-content border-0"
-                    style="border-radius: 25px"
-                  >
-                    <!-- Header -->
-                    <div
-                      class="modal-header bg-white"
-                      style="
-                        padding: 20px 30px;
-                        border-bottom: 1px solid #eee;
-                        border-top-left-radius: 25px;
-                        border-top-right-radius: 25px;
-                      "
-                    >
-                      <h5
-                        class="modal-title fw-semibold d-flex align-items-center"
-                        style="color: #086cac"
-                      >
-                        <i class="bi bi-plus-circle-fill me-2"></i> Add a new
-                        visit
-                      </h5>
-                      <button
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                      ></button>
-                    </div>
+              <div class="modal fade" id="roleModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4">
 
-                    <!-- Body -->
-                    <div class="modal-body" style="padding: 35px">
-                      <div class="row g-4">
-                        <div class="col-md-4">
-                          <label class="fw-semibold mb-1">Name</label>
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+      <!-- Header -->
+      <div class="modal-header bg-white px-4 py-3 border-bottom">
+        <h5 class="modal-title fw-semibold d-flex align-items-center text-primary">
+          <i class="bi bi-plus-circle-fill me-2"></i> Add a new visit
+        </h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-                        <div class="col-md-4">
-                          <label class="fw-semibold mb-1"
-                            >National ID number</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+      <!-- Body -->
+      <div class="modal-body py-4 px-4">
+        <div class="row g-3">
 
-                        <div class="col-md-4">
-                          <label class="fw-semibold mb-1"
-                            >Location of Visit</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Row 1 -->
+          <div class="col-4">
+            <label class="fw-semibold mb-1">Name</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
+          <div class="col-4">
+            <label class="fw-semibold mb-1">National ID number</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
+          <div class="col-4">
+            <label class="fw-semibold mb-1">Location of Visit</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1"
-                            >Purpose of the visit</label
-                          >
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Row 2 -->
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Purpose of the visit</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Notes</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1">Notes</label>
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Row 3 -->
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Email</label>
+            <input type="email" class="form-control rounded-3 py-2">
+          </div>
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Phone number</label>
+            <input type="text" class="form-control rounded-3 py-2">
+          </div>
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1">Email</label>
-                          <input
-                            type="email"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Row 4 -->
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Visit date</label>
+            <input type="date" class="form-control rounded-3 py-2">
+          </div>
+          <div class="col-6">
+            <label class="fw-semibold mb-1">Visit time</label>
+            <input type="time" class="form-control rounded-3 py-2">
+          </div>
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1">Phone number</label>
-                          <input
-                            type="text"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Hidden File Input -->
+          <input type="file" id="fileUpload" hidden accept="image/png, image/jpeg, application/pdf">
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1">Visit date</label>
-                          <input
-                            type="date"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
+          <!-- Upload Box -->
+          <div class="col-12">
+            <div id="uploadBox"
+                 class="border rounded-3 d-flex flex-column justify-content-center align-items-center"
+                 style="height: 140px; border: 2px dashed #d0d0d0; cursor: pointer;">
+              <i class="fa-solid fa-upload mb-2 text-primary" style="font-size: 25px;"></i>
+              <p class="text-muted mb-0 text-center">
+                Please upload attachments in PNG, JPG, PDF format.
+              </p>
+              <p id="fileName" class="mt-2 text-primary fw-semibold text-center"></p>
+            </div>
+          </div>
 
-                        <div class="col-md-6">
-                          <label class="fw-semibold mb-1">Visit time</label>
-                          <input
-                            type="time"
-                            class="form-control rounded-3 py-2"
-                          />
-                        </div>
-                        <input
-                          type="file"
-                          id="fileUpload"
-                          hidden
-                          accept="image/png, image/jpeg, application/pdf"
-                        />
+        </div>
+      </div>
 
-                        <!-- Upload Box -->
-                        <div
-                          id="uploadBox"
-                          class="border rounded-3 d-flex flex-column justify-content-center align-items-center"
-                          style="
-                            height: 140px;
-                            border: 2px dashed #d0d0d0 !important;
-                            cursor: pointer;
-                          "
-                        >
-                          <i
-                            class="fa-solid fa-upload mb-2"
-                            style="font-size: 25px; color: #086cac"
-                          ></i>
-                          <p class="text-muted mb-0">
-                            Please upload attachments in PNG, JPG, PDF format.
-                          </p>
+      <!-- Footer -->
+      <div class="modal-footer justify-content-center gap-3 py-3 border-top">
+        <button class="btn text-white px-5 py-2" style="background: #086cac; border-radius: 10px;">
+          Add
+        </button>
+        <button class="btn px-5 py-2" style="background: #e6e6e6; border-radius: 10px;" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
 
-                          <p
-                            id="fileName"
-                            class="mt-2 text-primary fw-semibold"
-                          ></p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Confirm Close Modal -->
+    </div>
+  </div>
+</div>
 
-                    <!-- Footer -->
-                    <div
-                      class="modal-footer d-flex justify-content-center gap-4"
-                      style="
-                        padding: 25px;
-                        border-top: 1px solid #eee;
-                        border-bottom-left-radius: 25px;
-                        border-bottom-right-radius: 25px;
-                      "
-                    >
-                      <button
-                        class="btn text-white px-5 py-2"
-                        style="background: #086cac; border-radius: 10px"
-                      >
-                        Add
-                      </button>
-
-                      <button
-                        class="btn px-5 py-2"
-                        style="background: #e6e6e6; border-radius: 10px"
-                        id="openConfirmClose"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="modal fade" id="confirmCloseModal">
                 <div class="modal-dialog modal-dialog-centered">
                   <div
