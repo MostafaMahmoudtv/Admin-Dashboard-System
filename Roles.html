@@ -284,7 +284,7 @@
       <main class="main-content d-flex flex-column gap-2 pe-3 flex-grow-1">
         <!-- Top Bar -->
         <header
-          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center mb-4"
+          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center mb-4 mian-header"
         >
           <div class="d-flex align-items-center gap-3">
             <button class="four-circls btn bg-white">
@@ -346,7 +346,9 @@
         </header>
 
         <!-- Roles & Permissions Section -->
-        <div class="card shadow-sm border-0 rounded-3 container">
+        <div
+          class="my-center border card p-4 shadow-sm rounded-3 container main-container2"
+        >
           <div class="card-body">
             <!-- Header -->
             <div
@@ -387,213 +389,253 @@
                 </button>
 
                 <!-- Modal (Form) -->
-             <div class="modal fade" id="roleModal" tabindex="-1">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content rounded-4 border-0">
-      <!-- Header -->
-      <div class="modal-header bg-light rounded-top-4">
-        <h5 class="modal-title d-flex align-items-center fw-semibold text-primary">
-          <i class="bi bi-plus-circle-fill me-2"></i> Add a new role
-        </h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+                <div class="modal fade" id="roleModal" tabindex="-1">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content rounded-4 border-0">
+                      <!-- Header -->
+                      <div class="modal-header bg-light rounded-top-4">
+                        <h5
+                          class="modal-title d-flex align-items-center fw-semibold text-primary"
+                        >
+                          <i class="bi bi-plus-circle-fill me-2"></i> Add a new
+                          role
+                        </h5>
+                        <button
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                        ></button>
+                      </div>
 
-      <!-- Body -->
-      <div class="modal-body">
-        <!-- Role Name -->
-        <label class="fw-semibold mb-2">Role name</label>
-        <input type="text" class="form-control mb-4 rounded-3" />
+                      <!-- Body -->
+                      <div class="modal-body">
+                        <!-- Role Name -->
+                        <label class="fw-semibold mb-2">Role name</label>
+                        <input
+                          type="text"
+                          class="form-control mb-4 rounded-3"
+                        />
 
-        <!-- Title -->
-        <div class="fw-semibold p-2 rounded-3 mb-3" style="background: #eaf7fd; color: #086cac">
-          Permissions list
-        </div>
+                        <!-- Title -->
+                        <div
+                          class="fw-semibold p-2 rounded-3 mb-3"
+                          style="background: #eaf7fd; color: #086cac"
+                        >
+                          Permissions list
+                        </div>
 
-        <!-- Grid -->
-        <div class="container-fluid">
-          <!-- Headers -->
-          <div class="row text-center mb-3">
-            <div class="col-3"></div>
-            <div class="col-3 text-secondary fw-semibold">Lists</div>
-            <div class="col-3 text-secondary fw-semibold">Time</div>
-            <div class="col-3 text-secondary fw-semibold">Visit</div>
-          </div>
+                        <!-- Grid -->
+                        <div class="container-fluid">
+                          <!-- Headers -->
+                          <div class="row text-center mb-3">
+                            <div
+                            id="allPermission2"
+                              class="col-3 text-center justify-content-end d-inline-flex"
+                            >
+                              <input
+                                type="checkbox"
+                                id="allPermission"
+                                style="width: 16px; height: 16px"
+                              />
+                              <div class="ms-1"  style="margin-right: 0.9rem">
+                                All Permission
+                              </div>
+                            </div>
+                            <div class="col-3 text-secondary fw-semibold">
+                              Lists
+                            </div>
+                            <div class="col-3 text-secondary fw-semibold">
+                              Time
+                            </div>
+                            <div class="col-3 text-secondary fw-semibold">
+                              Visit
+                            </div>
+                          </div>
 
-          <!-- Row 1 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" class="form-check-input" style="width:16px;height:16px;" />
-            </div>
+                          <!-- Rows -->
+                          <div class="row align-items-center mb-2">
+                            <div class="col-3 text-center">
+                              <input
+                                type="checkbox"
+                                class="permission"
+                                style="width: 16px; height: 16px"
+                              />
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Allow list</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Edit entry time</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Visit permissions</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center mb-2">
+                            <div class="col-3 text-center">
+                              <input
+                                type="checkbox"
+                                class="permission"
+                                style="width: 16px; height: 16px"
+                              />
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Allow list</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Edit entry time</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Visit permissions</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center mb-2">
+                            <div class="col-3 text-center">
+                              <input
+                                type="checkbox"
+                                class="permission"
+                                style="width: 16px; height: 16px"
+                              />
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Allow list</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Edit entry time</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Visit permissions</label>
+                              </div>
+                            </div>
+                          </div>
 
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Allow list</label>
-              </div>
-            </div>
+                          <!-- باقي الصفوف نفس الطريقة: ضيف class="permission" لكل checkbox -->
+                          <div class="row align-items-center mb-2">
+                            <div class="col-3 text-center">
+                              <input
+                                type="checkbox"
+                                class="permission"
+                                style="width: 16px; height: 16px"
+                              />
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Block list</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Edit exit time</label>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="d-flex align-items-center gap-2">
+                                <input
+                                  type="checkbox"
+                                  class="permission"
+                                  style="width: 16px; height: 16px"
+                                />
+                                <label>Visit entry</label>
+                              </div>
+                            </div>
+                          </div>
 
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Edit entry time</label>
-              </div>
-            </div>
+                          <!-- ضيف class="permission" لكل checkbox في الصفوف الباقية -->
+                          <!-- ... بقية الصفوف -->
+                        </div>
+                      </div>
 
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Visit permissions</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Block list</label>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Edit exit time</label>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Visit entry</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>General settings</label>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Delete record</label>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Visit exit</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 4 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Reports</label>
-              </div>
-            </div>
-
-            <div class="col-3"></div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Permanent visitor</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 5 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Visit permissions</label>
-              </div>
-            </div>
-
-            <div class="col-3"></div>
-            <div class="col-3"></div>
-          </div>
-
-          <!-- Row 6 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Places guide</label>
-              </div>
-            </div>
-
-            <div class="col-3"></div>
-            <div class="col-3"></div>
-          </div>
-
-          <!-- Row 7 -->
-          <div class="row align-items-center mb-2">
-            <div class="col-3 text-center">
-              <input type="checkbox" style="width:16px;height:16px;" />
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex align-items-center gap-2">
-                <input type="checkbox" style="width:16px;height:16px;" />
-                <label>Users</label>
-              </div>
-            </div>
-
-            <div class="col-3"></div>
-            <div class="col-3"></div>
-          </div>
-
-        </div>
-        <!-- End container -->
-      </div>
-
-      <!-- Footer -->
-      <div class="modal-footer d-flex justify-content-center gap-3">
-        <button class="btn px-5 text-white" style="background: #094c7e">
-          Add
-        </button>
-        <button class="btn btn-light px-5 border" data-bs-dismiss="modal">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
+                      <!-- Footer -->
+                      <div
+                        class="modal-footer d-flex justify-content-center gap-3"
+                      >
+                        <button
+                          class="btn px-5 text-white"
+                          style="background: #094c7e"
+                        >
+                          Add
+                        </button>
+                        <button
+                          class="btn btn-light px-5 border"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <button
                   class="btn border border-info-subtle rounded-3 px-3 btn-filter-mobile"
@@ -604,7 +646,7 @@
             </div>
 
             <!-- Table -->
-            <div class="table-responsive">
+            <div class="table-responsive mt-4">
               <table class="table align-middle">
                 <thead class="table-light">
                   <tr>
@@ -689,7 +731,28 @@
         </div>
       </main>
     </div>
+    <script>
+      const allCheckbox = document.getElementById("allPermission");
+      const permissions = document.querySelectorAll(".permission");
 
+      // تحديد/إلغاء كل الصلاحيات عند الضغط على All Permission
+      allCheckbox.addEventListener("change", () => {
+        permissions.forEach((cb) => (cb.checked = allCheckbox.checked));
+      });
+
+      // إذا أي checkbox فرعي اتغير، نحدث حالة All Permission
+      permissions.forEach((cb) => {
+        cb.addEventListener("change", () => {
+          if (!cb.checked) {
+            allCheckbox.checked = false;
+          } else {
+            // لو كل checkboxes فرعية مختارة، نعلم All Permission
+            const allChecked = Array.from(permissions).every((p) => p.checked);
+            allCheckbox.checked = allChecked;
+          }
+        });
+      });
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
