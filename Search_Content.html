@@ -281,10 +281,10 @@
       </aside>
 
       <!-- Main Content -->
-      <main class="main-content  d-flex flex-column gap-2 pe-3 flex-grow-1">
+      <main class="main-content d-flex flex-column pe-3 flex-grow-1">
         <!-- Top Bar -->
         <header
-          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center mb-4 mian-header"
+          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center mb-4"
         >
           <div class="d-flex align-items-center gap-3">
             <button class="four-circls btn bg-white">
@@ -347,459 +347,455 @@
 
         <!-- Search Content Section -->
 
-        <div
-          class=" bg-white card  rounded-3 px-2 py-2  my-center  main-container2"
-        >
-          <div class="card-body  ">
-            <div
-              class="container d-flex w-100 border-bottom pb-4 flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 bg-white"
-            >
-              <h5 class="mb-0 d-flex align-items-center fw-semibold">
+        <div class="bg-white card-body rounded-3 overflow-hidden py-2 px-2">
+          <div
+            class="d-flex w-100 border-bottom pb-4 flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 bg-white"
+          >
+            <h5 class="mb-0 d-flex align-items-center fw-semibold">
+              <i
+                class="bi bi-person-badge-fill me-2"
+                style="color: #086cac"
+              ></i>
+              Search Content
+            </h5>
+
+            <!-- Right Actions -->
+            <div class="d-flex align-items-center gap-2 ms-md-auto">
+              <div class="position-relative">
                 <i
-                  class="bi bi-person-badge-fill me-2"
-                  style="color: #086cac"
+                  class="bi bi-search position-absolute top-50 translate-middle-y ms-3 text-muted"
                 ></i>
-                Search Content
-              </h5>
+                <input
+                  type="text"
+                  class="form-control ps-5"
+                  placeholder="Search"
+                  style="min-width: 220px"
+                />
+              </div>
 
-              <!-- Right Actions -->
-              <div class="d-flex align-items-center gap-2 ms-md-auto">
-                <div class="position-relative">
-                  <i
-                    class="bi bi-search position-absolute top-50 translate-middle-y ms-3 text-muted"
-                  ></i>
-                  <input
-                    type="text"
-                    class="form-control ps-5"
-                    placeholder="Search"
-                    style="min-width: 220px"
-                  />
-                </div>
-
-                <button
-                  class="btn btn-outline-success px-3 py-2 rounded-3 btn-sm"
-                >
-                  <i class="fas fa-file-excel"></i>
-                </button>
-                <!-- Modal (Form) -->
-                <div class="modal fade" id="roleModal">
-                  <div class="modal-dialog modal-lg">
+              <button
+                class="btn btn-outline-success px-3 py-2 rounded-3 btn-sm"
+              >
+                <i class="fas fa-file-excel"></i>
+              </button>
+              <!-- Modal (Form) -->
+              <div class="modal fade" id="roleModal">
+                <div class="modal-dialog modal-lg">
+                  <div
+                    class="modal-content border-0"
+                    style="border-radius: 25px"
+                  >
+                    <!-- Header -->
                     <div
-                      class="modal-content border-0"
-                      style="border-radius: 25px"
+                      class="modal-header bg-white"
+                      style="
+                        padding: 20px 30px;
+                        border-bottom: 1px solid #eee;
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                      "
                     >
-                      <!-- Header -->
-                      <div
-                        class="modal-header bg-white"
-                        style="
-                          padding: 20px 30px;
-                          border-bottom: 1px solid #eee;
-                          border-top-left-radius: 25px;
-                          border-top-right-radius: 25px;
-                        "
+                      <h5
+                        class="modal-title fw-semibold d-flex align-items-center"
+                        style="color: #086cac"
                       >
-                        <h5
-                          class="modal-title fw-semibold d-flex align-items-center"
-                          style="color: #086cac"
-                        >
-                          <i class="bi bi-plus-circle-fill me-2"></i> Add a new
-                          visit
-                        </h5>
-                        <button
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                        ></button>
-                      </div>
-
-                      <!-- Body -->
-                      <div class="modal-body" style="padding: 35px">
-                        <div class="row g-4">
-                          <div class="col-md-4">
-                            <label class="fw-semibold mb-1">Name</label>
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-4">
-                            <label class="fw-semibold mb-1"
-                              >National ID number</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-4">
-                            <label class="fw-semibold mb-1"
-                              >Location of Visit</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1"
-                              >Purpose of the visit</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1">Notes</label>
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1">Email</label>
-                            <input
-                              type="email"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1">Phone number</label>
-                            <input
-                              type="text"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1">Visit date</label>
-                            <input
-                              type="date"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-
-                          <div class="col-md-6">
-                            <label class="fw-semibold mb-1">Visit time</label>
-                            <input
-                              type="time"
-                              class="form-control rounded-3 py-2"
-                            />
-                          </div>
-                          <input
-                            type="file"
-                            id="fileUpload"
-                            hidden
-                            accept="image/png, image/jpeg, application/pdf"
-                          />
-
-                          <!-- Upload Box -->
-                          <div
-                            id="uploadBox"
-                            class="border rounded-3 d-flex flex-column justify-content-center align-items-center"
-                            style="
-                              height: 140px;
-                              border: 2px dashed #d0d0d0 !important;
-                              cursor: pointer;
-                            "
-                          >
-                            <i
-                              class="fa-solid fa-upload mb-2"
-                              style="font-size: 25px; color: #086cac"
-                            ></i>
-                            <p class="text-muted mb-0">
-                              Please upload attachments in PNG, JPG, PDF format.
-                            </p>
-
-                            <p
-                              id="fileName"
-                              class="mt-2 text-primary fw-semibold"
-                            ></p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Confirm Close Modal -->
-
-                      <!-- Footer -->
-                      <div
-                        class="modal-footer d-flex justify-content-center gap-4"
-                        style="
-                          padding: 25px;
-                          border-top: 1px solid #eee;
-                          border-bottom-left-radius: 25px;
-                          border-bottom-right-radius: 25px;
-                        "
-                      >
-                        <button
-                          class="btn text-white px-5 py-2"
-                          style="background: #086cac; border-radius: 10px"
-                        >
-                          Add
-                        </button>
-
-                        <button
-                          class="btn px-5 py-2"
-                          style="background: #e6e6e6; border-radius: 10px"
-                          id="openConfirmClose"
-                        >
-                          Close
-                        </button>
-                      </div>
+                        <i class="bi bi-plus-circle-fill me-2"></i> Add a new
+                        visit
+                      </h5>
+                      <button
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                      ></button>
                     </div>
-                  </div>
-                </div>
-                <div class="modal fade" id="confirmCloseModal">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div
-                      class="modal-content text-center p-4"
-                      style="border-radius: 25px"
-                    >
-                      <!-- Icon -->
-                      <div class="mb-3">
+
+                    <!-- Body -->
+                    <div class="modal-body" style="padding: 35px">
+                      <div class="row g-4">
+                        <div class="col-md-4">
+                          <label class="fw-semibold mb-1">Name</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-4">
+                          <label class="fw-semibold mb-1"
+                            >National ID number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-4">
+                          <label class="fw-semibold mb-1"
+                            >Location of Visit</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1"
+                            >Purpose of the visit</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1">Notes</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1">Email</label>
+                          <input
+                            type="email"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1">Phone number</label>
+                          <input
+                            type="text"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1">Visit date</label>
+                          <input
+                            type="date"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <label class="fw-semibold mb-1">Visit time</label>
+                          <input
+                            type="time"
+                            class="form-control rounded-3 py-2"
+                          />
+                        </div>
+                        <input
+                          type="file"
+                          id="fileUpload"
+                          hidden
+                          accept="image/png, image/jpeg, application/pdf"
+                        />
+
+                        <!-- Upload Box -->
                         <div
+                          id="uploadBox"
+                          class="border rounded-3 d-flex flex-column justify-content-center align-items-center"
                           style="
-                            width: 90px;
-                            height: 90px;
-                            background: #ffebeb;
-                            border-radius: 50%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            margin: auto;
+                            height: 140px;
+                            border: 2px dashed #d0d0d0 !important;
+                            cursor: pointer;
                           "
                         >
                           <i
-                            class="bi bi-exclamation-lg"
-                            style="font-size: 45px; color: #e74c3c"
+                            class="fa-solid fa-upload mb-2"
+                            style="font-size: 25px; color: #086cac"
                           ></i>
+                          <p class="text-muted mb-0">
+                            Please upload attachments in PNG, JPG, PDF format.
+                          </p>
+
+                          <p
+                            id="fileName"
+                            class="mt-2 text-primary fw-semibold"
+                          ></p>
                         </div>
                       </div>
+                    </div>
+                    <!-- Confirm Close Modal -->
 
-                      <!-- Title -->
-                      <h4 class="fw-bold mb-4" style="color: #344767">
-                        Are you sure you want to decline this visit?
-                      </h4>
+                    <!-- Footer -->
+                    <div
+                      class="modal-footer d-flex justify-content-center gap-4"
+                      style="
+                        padding: 25px;
+                        border-top: 1px solid #eee;
+                        border-bottom-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                      "
+                    >
+                      <button
+                        class="btn text-white px-5 py-2"
+                        style="background: #086cac; border-radius: 10px"
+                      >
+                        Add
+                      </button>
 
-                      <!-- Buttons -->
-                      <div class="d-flex justify-content-center gap-3">
-                        <button
-                          class="btn px-4 py-2"
-                          style="background: #e6e6e6; border-radius: 10px"
-                          data-bs-dismiss="modal"
-                        >
-                          Cancel
-                        </button>
-
-                        <button
-                          class="btn text-white px-4 py-2"
-                          style="background: #e74c3c; border-radius: 10px"
-                          id="confirmDeclineBtn"
-                        >
-                          Yes
-                        </button>
-                      </div>
+                      <button
+                        class="btn px-5 py-2"
+                        style="background: #e6e6e6; border-radius: 10px"
+                        id="openConfirmClose"
+                      >
+                        Close
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="modal fade" id="confirmCloseModal">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div
+                    class="modal-content text-center p-4"
+                    style="border-radius: 25px"
+                  >
+                    <!-- Icon -->
+                    <div class="mb-3">
+                      <div
+                        style="
+                          width: 90px;
+                          height: 90px;
+                          background: #ffebeb;
+                          border-radius: 50%;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          margin: auto;
+                        "
+                      >
+                        <i
+                          class="bi bi-exclamation-lg"
+                          style="font-size: 45px; color: #e74c3c"
+                        ></i>
+                      </div>
+                    </div>
 
-            <div class="container edit-container   pt-3 pb-4 bg-white">
-              <div class="d-flex gap-3 align-items-end flex-wrap">
-                <!-- Role -->
-                <div class="flex-grow-1">
-                  <label class="form-label fw-semibold">Role</label>
-                  <select class="form-select py-2">
-                    <option>All</option>
-                  </select>
+                    <!-- Title -->
+                    <h4 class="fw-bold mb-4" style="color: #344767">
+                      Are you sure you want to decline this visit?
+                    </h4>
+
+                    <!-- Buttons -->
+                    <div class="d-flex justify-content-center gap-3">
+                      <button
+                        class="btn px-4 py-2"
+                        style="background: #e6e6e6; border-radius: 10px"
+                        data-bs-dismiss="modal"
+                      >
+                        Cancel
+                      </button>
+
+                      <button
+                        class="btn text-white px-4 py-2"
+                        style="background: #e74c3c; border-radius: 10px"
+                        id="confirmDeclineBtn"
+                      >
+                        Yes
+                      </button>
+                    </div>
+                  </div>
                 </div>
-
-                <!-- User -->
-                <div class="flex-grow-1">
-                  <label class="form-label fw-semibold">User</label>
-                  <input
-                    type="text"
-                    class="form-control py-2"
-                    placeholder="Search"
-                  />
-                </div>
-
-                <!-- Search Button -->
-                <button
-                  class="btn d-flex align-items-center justify-content-center"
-                  style="
-                    width: 45px;
-                    height: 45px;
-                    background: #0a65a8;
-                    border-radius: 10px;
-                  "
-                >
-                  <i class="fa-solid fa-search text-white fs-5"></i>
-                </button>
-
-                <!-- Clean Button (SVG Icon) -->
-                <button
-                  class="btn d-flex align-items-center justify-content-center"
-                  style="
-                    width: 45px;
-                    height: 45px;
-                    background: #72c2ef;
-                    border-radius: 10px;
-                  "
-                >
-                  <i class="fa-solid fa-broom text-white"></i>
-                </button>
               </div>
-            </div>
-
-            <div class="container table-responsive">
-              <table class="table table-striped table-hover align-middle">
-                <thead class="table-light">
-                  <tr>
-                    <th></th>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>National ID</th>
-                    <th>Birth Date</th>
-                    <th>City</th>
-                    <th>Address</th>
-                    <th>Rfid</th>
-                    <th>Destination</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>
-                      <i
-                        class="bi bi-eye-fill text-primary fs-5"
-                        role="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#viewModal"
-                      ></i>
-                    </td>
-                    <td>1</td>
-                    <td>Khaled Mohammed</td>
-                    <td>548454</td>
-                    <td>2025-02-02</td>
-                    <td>Egypt</td>
-                    <td>Address</td>
-                    <td>Rfid</td>
-                    <td>Egypt</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
-          <!-- Modal -->
-          <div class="modal fade" id="viewModal" tabindex="-1">
-            <div
-              class="modal-dialog modal-lg modal-dialog-centered modal-narrow"
-            >
-              <div class="modal-content p-3">
-                <div class="modal-header border-0">
-                  <h5 class="modal-title">
-                    <i class="bi bi-eye-fill text-primary"></i> View Search
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
-                </div>
 
-                <div class="modal-body" style="background-color: white">
-                  <!-- Client Details Box -->
-                  <div class="border rounded p-3 mb-4 bg-white">
-                    <h6 class="fw-bold mb-3">Client Details</h6>
+          <div class="container edit-container p-0 pt-3 bg-white">
+            <div class="d-flex gap-3 align-items-end flex-wrap">
+              <!-- Role -->
+              <div class="flex-grow-1">
+                <label class="form-label fw-semibold">Role</label>
+                <select class="form-select py-2">
+                  <option>All</option>
+                </select>
+              </div>
 
-                    <div class="row g-4">
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Name</small>
-                        <div>Khaled Mohammed</div>
-                      </div>
+              <!-- User -->
+              <div class="flex-grow-1">
+                <label class="form-label fw-semibold">User</label>
+                <input
+                  type="text"
+                  class="form-control py-2"
+                  placeholder="Search"
+                />
+              </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">User Name</small>
-                        <div>Khaled Mohammed</div>
-                      </div>
+              <!-- Search Button -->
+              <button
+                class="btn d-flex align-items-center justify-content-center"
+                style="
+                  width: 45px;
+                  height: 45px;
+                  background: #0a65a8;
+                  border-radius: 10px;
+                "
+              >
+                <i class="fa-solid fa-search text-white fs-5"></i>
+              </button>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">National ID</small>
-                        <div>26666</div>
-                      </div>
+              <!-- Clean Button (SVG Icon) -->
+              <button
+                class="btn d-flex align-items-center justify-content-center"
+                style="
+                  width: 45px;
+                  height: 45px;
+                  background: #72c2ef;
+                  border-radius: 10px;
+                "
+              >
+                <i class="fa-solid fa-broom text-white"></i>
+              </button>
+            </div>
+          </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Rfid</small>
-                        <div>Khaled Mohammed</div>
-                      </div>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th></th>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>National ID</th>
+                  <th>Birth Date</th>
+                  <th>City</th>
+                  <th>Address</th>
+                  <th>Rfid</th>
+                  <th>Destination</th>
+                </tr>
+              </thead>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Birth Date</small>
-                        <div>2025-02-02</div>
-                      </div>
+              <tbody>
+                <tr>
+                  <td>
+                    <i
+                      class="bi bi-eye-fill text-primary fs-5"
+                      role="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#viewModal"
+                    ></i>
+                  </td>
+                  <td>1</td>
+                  <td>Khaled Mohammed</td>
+                  <td>548454</td>
+                  <td>2025-02-02</td>
+                  <td>Egypt</td>
+                  <td>Address</td>
+                  <td>Rfid</td>
+                  <td>Egypt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div   class="modal fade" id="viewModal" tabindex="-1">
+          <div class="modal-dialog modal-lg modal-dialog-centered modal-narrow ">
+            <div class="modal-content p-3">
+              <div class="modal-header border-0">
+                <h5 class="modal-title">
+                  <i class="bi bi-eye-fill text-primary"></i> View Search
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">City</small>
-                        <div>Zagazig</div>
-                      </div>
+              <div class="modal-body"style="background-color:white;">
+                <!-- Client Details Box -->
+                <div class="border rounded p-3 mb-4 bg-white">
+                  <h6 class="fw-bold mb-3">Client Details</h6>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Address</small>
-                        <div>Zagazig</div>
-                      </div>
+                  <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Name</small>
+                      <div>Khaled Mohammed</div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Destination</small>
-                        <div>Zagazig</div>
-                      </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">User Name</small>
+                      <div>Khaled Mohammed</div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Date</small>
-                        <div>2025-02-02</div>
-                      </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">National ID</small>
+                      <div>26666</div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Work Place</small>
-                        <div>Egypt</div>
-                      </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Rfid</small>
+                      <div>Khaled Mohammed</div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Checkin</small>
-                        <div>2025-02-02 12:15</div>
-                      </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Birth Date</small>
+                      <div>2025-02-02</div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 col-12">
-                        <small class="text-muted d-block">Checkout</small>
-                        <div>2025-02-02 12:15</div>
-                      </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">City</small>
+                      <div>Zagazig</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Address</small>
+                      <div>Zagazig</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Destination</small>
+                      <div>Zagazig</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Date</small>
+                      <div>2025-02-02</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Work Place</small>
+                      <div>Egypt</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Checkin</small>
+                      <div>2025-02-02 12:15</div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                      <small class="text-muted d-block">Checkout</small>
+                      <div>2025-02-02 12:15</div>
                     </div>
                   </div>
+                </div>
 
-                  <!-- ID Photo -->
-                  <div class="border rounded p-3 bg-white">
-                    <h6 class="fw-bold mb-3">ID Photo</h6>
+                <!-- ID Photo -->
+                <div class="border rounded p-3 bg-white">
+                  <h6 class="fw-bold mb-3">ID Photo</h6>
 
-                    <img src="assets/id.png" class="img-fluid rounded" />
-                  </div>
+                  <img
+                    src="assets/id.png"
+                    class="img-fluid rounded"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <!-- Optional JS -->
       </main>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
     <script src="index.js"></script>
- 
   </body>
 </html>
