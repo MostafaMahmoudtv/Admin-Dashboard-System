@@ -281,10 +281,10 @@
       </aside>
 
       <!-- Main Content -->
-      <main class="main-content d-flex flex-column gap-2 pe-3 flex-grow-1">
+      <main class="main-content d-flex flex-column gap-2    flex-grow-1">
         <!-- Top Bar -->
         <header
-          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center   mian-header"
+          class="d-none bg-white py-3 px-3 d-md-flex justify-content-between align-items-center mian-header"
         >
           <div class="d-flex align-items-center gap-3">
             <button class="four-circls btn bg-white">
@@ -347,7 +347,7 @@
 
         <!-- Roles & Permissions Section -->
         <div
-          class="my-center border card p-4 shadow-sm rounded-3  main-container2"
+          class="my-center border card p-4 shadow-sm rounded-3 main-container2"
         >
           <div class="card-body">
             <!-- Header -->
@@ -395,7 +395,8 @@
                       <!-- Header -->
                       <div class="modal-header bg-light rounded-top-4">
                         <h5
-                          class="modal-title d-flex align-items-center fw-semibold text-primary"
+                          class="modal-title d-flex align-items-center fw-semibold"
+                          style="color: #086cac"
                         >
                           <i class="bi bi-plus-circle-fill me-2"></i> Add a new
                           role
@@ -418,27 +419,37 @@
                         <!-- Title -->
                         <div
                           class="fw-semibold p-2 rounded-3 mb-3"
-                          style="background: #eaf7fd; color: #086cac"
+                          style="
+                            background: #eaf7fd;
+                            color: #086cac;
+                            border: none !important;
+                          "
                         >
                           Permissions list
                         </div>
 
                         <!-- Grid -->
-                        <div class="container-fluid">
+                        <div
+                          class="container-fluid add-role border-0"
+                          style="
+                            padding: 2rem !important;
+                            border: none !important;
+                          "
+                        >
                           <!-- Headers -->
-                          <div class="row text-center mb-3">
+                          <div
+                            class="row text-center pb-3"
+                            style="border-bottom: 1px solid rgb(227, 227, 227)"
+                          >
                             <div
-                            id="allPermission2"
-                              class="col-3 text-center justify-content-end d-inline-flex"
+                              id="allPermission2"
+                              class="col-3 text-center justify-content-start d-inline-flex"
                             >
                               <input
                                 type="checkbox"
                                 id="allPermission"
-                                style="width: 16px; height: 16px"
+                                style="width: 24px; height: 24px"
                               />
-                              <div class="ms-1"  style="margin-right: 0.9rem">
-                                All Permission
-                              </div>
                             </div>
                             <div class="col-3 text-secondary fw-semibold">
                               Lists
@@ -452,12 +463,15 @@
                           </div>
 
                           <!-- Rows -->
-                          <div class="row align-items-center mb-2">
-                            <div class="col-3 text-center">
+                          <div
+                            class="row py-2 align-items-center mb-2"
+                            style="border-bottom: 1px solid rgb(227, 227, 227)"
+                          >
+                            <div class="col-3 text-start first-input">
                               <input
                                 type="checkbox"
                                 class="permission"
-                                style="width: 16px; height: 16px"
+                                style="width: 24px; height: 24px"
                               />
                             </div>
                             <div class="col-3">
@@ -465,7 +479,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Allow list</label>
                               </div>
@@ -475,7 +489,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Edit entry time</label>
                               </div>
@@ -485,18 +499,21 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Visit permissions</label>
                               </div>
                             </div>
                           </div>
-                          <div class="row align-items-center mb-2">
-                            <div class="col-3 text-center">
+                          <div
+                            class="row py-2 align-items-center mb-2"
+                            style="border-bottom: 1px solid rgb(227, 227, 227)"
+                          >
+                            <div class="col-3 text-start first-input">
                               <input
                                 type="checkbox"
                                 class="permission"
-                                style="width: 16px; height: 16px"
+                                style="width: 24px; height: 24px"
                               />
                             </div>
                             <div class="col-3">
@@ -504,7 +521,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Allow list</label>
                               </div>
@@ -514,7 +531,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Edit entry time</label>
                               </div>
@@ -524,18 +541,21 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Visit permissions</label>
                               </div>
                             </div>
                           </div>
-                          <div class="row align-items-center mb-2">
-                            <div class="col-3 text-center">
+                          <div
+                            class="row py-2 align-items-center mb-2"
+                            style="border-bottom: 1px solid rgb(227, 227, 227)"
+                          >
+                            <div class="col-3 text-start first-input">
                               <input
                                 type="checkbox"
                                 class="permission"
-                                style="width: 16px; height: 16px"
+                                style="width: 24px; height: 24px"
                               />
                             </div>
                             <div class="col-3">
@@ -543,7 +563,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Allow list</label>
                               </div>
@@ -553,7 +573,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Edit entry time</label>
                               </div>
@@ -563,7 +583,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Visit permissions</label>
                               </div>
@@ -571,12 +591,15 @@
                           </div>
 
                           <!-- باقي الصفوف نفس الطريقة: ضيف class="permission" لكل checkbox -->
-                          <div class="row align-items-center mb-2">
-                            <div class="col-3 text-center">
+                          <div
+                            class="row py-2 align-items-center border-b-1 mb-2"
+                            style="border-bottom: 1px solid rgb(227, 227, 227)"
+                          >
+                            <div class="col-3 text-start first-input">
                               <input
                                 type="checkbox"
                                 class="permission"
-                                style="width: 16px; height: 16px"
+                                style="width: 24px; height: 24px"
                               />
                             </div>
                             <div class="col-3">
@@ -584,7 +607,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Block list</label>
                               </div>
@@ -594,7 +617,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Edit exit time</label>
                               </div>
@@ -604,7 +627,7 @@
                                 <input
                                   type="checkbox"
                                   class="permission"
-                                  style="width: 16px; height: 16px"
+                                  style="width: 24px; height: 24px"
                                 />
                                 <label>Visit entry</label>
                               </div>
