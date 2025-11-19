@@ -18,8 +18,7 @@ body {
 .mian-header {
   position: sticky !important;
   width: 76% !important;
-  right: 1.7% !important;
-  top: 2%;
+   top: 2%;
   z-index: 1000 !important;
   border: 0.5px solid rgb(232, 232, 232) !important;
 }
@@ -506,9 +505,8 @@ td i {
   margin-top: 0.8rem !important;
 }
 .my-center {
-  width: 73.5vw !important;
-margin-left: 23vw;
-}
+  width:76% !important;
+ }
 
 .custom-modal .modal-header {
   padding: 20px 30px !important;
